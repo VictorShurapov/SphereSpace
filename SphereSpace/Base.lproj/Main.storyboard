@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Yd-jX-Mac">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7ew-sW-riM">
+            <objects>
+                <navigationController id="9Yd-jX-Mac" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KGS-GI-eG6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NgO-aM-bjG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJh-gz-BQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-812" y="107"/>
+        </scene>
+        <!--SphereSpace-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SphereSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-ZE-NuV">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-kK-e0B">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNy-js-tyB">
+                                <state key="normal" title="Login / Create User"/>
+                                <connections>
+                                    <action selector="loginCreateUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HU0-50-pMQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG1-Vb-xbL" customClass="FBSDKLoginButton">
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4T4-ZE-NuV" firstAttribute="top" secondItem="gq8-kK-e0B" secondAttribute="bottom" constant="8" id="2Tl-CH-KcG"/>
+                            <constraint firstItem="MG1-Vb-xbL" firstAttribute="centerX" secondItem="nNy-js-tyB" secondAttribute="centerX" id="6jM-KZ-Hih"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4T4-ZE-NuV" secondAttribute="trailing" id="AUd-qm-gaI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gq8-kK-e0B" secondAttribute="leading" id="Cej-Dh-wtf"/>
+                            <constraint firstItem="4T4-ZE-NuV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M2O-mZ-yk0"/>
+                            <constraint firstItem="4T4-ZE-NuV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQ3-Nz-L5Q"/>
+                            <constraint firstItem="nNy-js-tyB" firstAttribute="top" secondItem="4T4-ZE-NuV" secondAttribute="bottom" constant="8" id="ar9-ML-Pcp"/>
+                            <constraint firstItem="4T4-ZE-NuV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e3L-cK-RhH"/>
+                            <constraint firstItem="MG1-Vb-xbL" firstAttribute="top" secondItem="nNy-js-tyB" secondAttribute="bottom" constant="8" id="g1r-A3-Pf3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gq8-kK-e0B" secondAttribute="trailing" id="hHv-iR-T2Q"/>
+                            <constraint firstItem="nNy-js-tyB" firstAttribute="centerX" secondItem="4T4-ZE-NuV" secondAttribute="centerX" id="mSx-Su-E1n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SphereSpace" id="Avk-ig-Uh2"/>
+                    <connections>
+                        <outlet property="email" destination="gq8-kK-e0B" id="y3e-pA-gE4"/>
+                        <outlet property="fbLoginButton" destination="MG1-Vb-xbL" id="lR3-zz-bV2"/>
+                        <outlet property="password" destination="4T4-ZE-NuV" id="wQg-mg-OiB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="107.49625187406298"/>
+        </scene>
+    </scenes>
+</document>

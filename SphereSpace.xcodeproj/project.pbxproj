@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		044183E4AB51DFD54231ED49 /* Pods_SphereSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36E934425856AD97C61D981 /* Pods_SphereSpace.framework */; };
+		54385C451DAE637F00152E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54385C441DAE637F00152E84 /* AppDelegate.swift */; };
+		54385C471DAE637F00152E84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54385C461DAE637F00152E84 /* ViewController.swift */; };
+		54385C4A1DAE637F00152E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54385C481DAE637F00152E84 /* Main.storyboard */; };
+		54385C4C1DAE637F00152E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54385C4B1DAE637F00152E84 /* Assets.xcassets */; };
+		54385C4F1DAE637F00152E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54385C4D1DAE637F00152E84 /* LaunchScreen.storyboard */; };
+		5475D6DD1DAE7836009D10AB /* DataBaseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5475D6DC1DAE7836009D10AB /* DataBaseTVC.swift */; };
+		54990EB91DAFB8A700459878 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54990EB81DAFB8A700459878 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		54385C411DAE637F00152E84 /* SphereSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SphereSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54385C441DAE637F00152E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54385C461DAE637F00152E84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54385C491DAE637F00152E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		54385C4B1DAE637F00152E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54385C4E1DAE637F00152E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		54385C501DAE637F00152E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5475D6DC1DAE7836009D10AB /* DataBaseTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseTVC.swift; sourceTree = "<group>"; };
+		54990EB81DAFB8A700459878 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		54990EBA1DAFCDB400459878 /* SphereSpace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SphereSpace.entitlements; sourceTree = "<group>"; };
+		688908089B03DE8F853749D3 /* Pods-SphereSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SphereSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-SphereSpace/Pods-SphereSpace.release.xcconfig"; sourceTree = "<group>"; };
+		6ED54BFF269C7989F768449A /* Pods-SphereSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SphereSpace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SphereSpace/Pods-SphereSpace.debug.xcconfig"; sourceTree = "<group>"; };
+		B36E934425856AD97C61D981 /* Pods_SphereSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SphereSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54385C3E1DAE637F00152E84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044183E4AB51DFD54231ED49 /* Pods_SphereSpace.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42D74B556C40AB5C71E2C580 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6ED54BFF269C7989F768449A /* Pods-SphereSpace.debug.xcconfig */,
+				688908089B03DE8F853749D3 /* Pods-SphereSpace.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		54385C381DAE637F00152E84 = {
+			isa = PBXGroup;
+			children = (
+				54385C431DAE637F00152E84 /* SphereSpace */,
+				54385C421DAE637F00152E84 /* Products */,
+				42D74B556C40AB5C71E2C580 /* Pods */,
+				BB9DDA575C2A2347D3A1AEEF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		54385C421DAE637F00152E84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54385C411DAE637F00152E84 /* SphereSpace.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54385C431DAE637F00152E84 /* SphereSpace */ = {
+			isa = PBXGroup;
+			children = (
+				54990EBA1DAFCDB400459878 /* SphereSpace.entitlements */,
+				54385C441DAE637F00152E84 /* AppDelegate.swift */,
+				54385C461DAE637F00152E84 /* ViewController.swift */,
+				54385C481DAE637F00152E84 /* Main.storyboard */,
+				5475D6DC1DAE7836009D10AB /* DataBaseTVC.swift */,
+				54385C4B1DAE637F00152E84 /* Assets.xcassets */,
+				54385C4D1DAE637F00152E84 /* LaunchScreen.storyboard */,
+				54385C501DAE637F00152E84 /* Info.plist */,
+				54990EB81DAFB8A700459878 /* GoogleService-Info.plist */,
+			);
+			path = SphereSpace;
+			sourceTree = "<group>";
+		};
+		BB9DDA575C2A2347D3A1AEEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B36E934425856AD97C61D981 /* Pods_SphereSpace.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54385C401DAE637F00152E84 /* SphereSpace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54385C531DAE637F00152E84 /* Build configuration list for PBXNativeTarget "SphereSpace" */;
+			buildPhases = (
+				7A19FE87DD574659451516DA /* 📦 Check Pods Manifest.lock */,
+				54385C3D1DAE637F00152E84 /* Sources */,
+				54385C3E1DAE637F00152E84 /* Frameworks */,
+				54385C3F1DAE637F00152E84 /* Resources */,
+				C1E2C71B8D0BA0FF1B026B56 /* 📦 Embed Pods Frameworks */,
+				10BB0670E0AE5AA1B243124B /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SphereSpace;
+			productName = SphereSpace;
+			productReference = 54385C411DAE637F00152E84 /* SphereSpace.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54385C391DAE637F00152E84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Victor Shurapov";
+				TargetAttributes = {
+					54385C401DAE637F00152E84 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 928AX9C685;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 54385C3C1DAE637F00152E84 /* Build configuration list for PBXProject "SphereSpace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54385C381DAE637F00152E84;
+			productRefGroup = 54385C421DAE637F00152E84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54385C401DAE637F00152E84 /* SphereSpace */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54385C3F1DAE637F00152E84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54385C4F1DAE637F00152E84 /* LaunchScreen.storyboard in Resources */,
+				54990EB91DAFB8A700459878 /* GoogleService-Info.plist in Resources */,
+				54385C4C1DAE637F00152E84 /* Assets.xcassets in Resources */,
+				54385C4A1DAE637F00152E84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10BB0670E0AE5AA1B243124B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SphereSpace/Pods-SphereSpace-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A19FE87DD574659451516DA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1E2C71B8D0BA0FF1B026B56 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SphereSpace/Pods-SphereSpace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54385C3D1DAE637F00152E84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54385C471DAE637F00152E84 /* ViewController.swift in Sources */,
+				54385C451DAE637F00152E84 /* AppDelegate.swift in Sources */,
+				5475D6DD1DAE7836009D10AB /* DataBaseTVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		54385C481DAE637F00152E84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54385C491DAE637F00152E84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		54385C4D1DAE637F00152E84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54385C4E1DAE637F00152E84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54385C511DAE637F00152E84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		54385C521DAE637F00152E84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54385C541DAE637F00152E84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ED54BFF269C7989F768449A /* Pods-SphereSpace.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SphereSpace/SphereSpace.entitlements;
+				DEVELOPMENT_TEAM = 928AX9C685;
+				INFOPLIST_FILE = SphereSpace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spherespace.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		54385C551DAE637F00152E84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 688908089B03DE8F853749D3 /* Pods-SphereSpace.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SphereSpace/SphereSpace.entitlements;
+				DEVELOPMENT_TEAM = 928AX9C685;
+				INFOPLIST_FILE = SphereSpace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spherespace.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54385C3C1DAE637F00152E84 /* Build configuration list for PBXProject "SphereSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54385C511DAE637F00152E84 /* Debug */,
+				54385C521DAE637F00152E84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54385C531DAE637F00152E84 /* Build configuration list for PBXNativeTarget "SphereSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54385C541DAE637F00152E84 /* Debug */,
+				54385C551DAE637F00152E84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54385C391DAE637F00152E84 /* Project object */;
+}
