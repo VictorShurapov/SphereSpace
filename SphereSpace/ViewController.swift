@@ -78,12 +78,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     
-//    // VDL or VRA is best place for segue???
-//    override func viewDidAppear(_ animated: Bool) {
-//        if FIRAuth.auth()?.currentUser != nil {
-//            self.performSegue(withIdentifier: "signIn", sender: nil)
-//        }
-//    }
+    // VDL or VRA is best place for segue???
+    override func viewDidAppear(_ animated: Bool) {
+        if FIRAuth.auth()?.currentUser != nil {
+            self.performSegue(withIdentifier: "signIn", sender: nil)
+        }
+    }
     
     // EMAIL LOGIN
     func login() {
