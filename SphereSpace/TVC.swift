@@ -79,11 +79,13 @@ class TVC: UITableViewController {
         return cell!
     }
     
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let movedObject = self.posts[sourceIndexPath.row]
-        posts.remove(at: sourceIndexPath.row)
-        posts.insert(movedObject, at: destinationIndexPath.row)
-    }
+    // Movable Cells
+    
+//    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        let movedObject = self.posts[sourceIndexPath.row]
+//        posts.remove(at: sourceIndexPath.row)
+//        posts.insert(movedObject, at: destinationIndexPath.row)
+//    }
     
     //        dataBaseRef.child("liveStreams").child(userID!).observe(.childAdded, with: {
     //            // Getting user stream url

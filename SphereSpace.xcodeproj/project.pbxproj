@@ -14,6 +14,14 @@
 		54385C4C1DAE637F00152E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54385C4B1DAE637F00152E84 /* Assets.xcassets */; };
 		54385C4F1DAE637F00152E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54385C4D1DAE637F00152E84 /* LaunchScreen.storyboard */; };
 		54990EB91DAFB8A700459878 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54990EB81DAFB8A700459878 /* GoogleService-Info.plist */; };
+		54B2CB2C1DDCADFD008AB60A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2CB2B1DDCADFD008AB60A /* PlayerViewController.swift */; };
+		54B2CB351DDCB1B9008AB60A /* vr.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 54B2CB2E1DDCB1B9008AB60A /* vr.mp4 */; };
+		54B2CB361DDCB1B9008AB60A /* vr_stereo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 54B2CB2F1DDCB1B9008AB60A /* vr_stereo.mp4 */; };
+		54B2CB371DDCB1B9008AB60A /* pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54B2CB301DDCB1B9008AB60A /* pause@3x.png */; };
+		54B2CB381DDCB1B9008AB60A /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54B2CB311DDCB1B9008AB60A /* play@3x.png */; };
+		54B2CB391DDCB1B9008AB60A /* arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = 54B2CB321DDCB1B9008AB60A /* arrows.png */; };
+		54B2CB3A1DDCB1B9008AB60A /* cardboardOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 54B2CB331DDCB1B9008AB60A /* cardboardOff.png */; };
+		54B2CB3B1DDCB1B9008AB60A /* cardboardOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 54B2CB341DDCB1B9008AB60A /* cardboardOn.png */; };
 		54BBE9E71DDA122300DF45CE /* TVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBE9E61DDA122300DF45CE /* TVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +35,14 @@
 		54385C501DAE637F00152E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54990EB81DAFB8A700459878 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		54990EBB1DAFD21800459878 /* SphereSpace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SphereSpace.entitlements; sourceTree = "<group>"; };
+		54B2CB2B1DDCADFD008AB60A /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		54B2CB2E1DDCB1B9008AB60A /* vr.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = vr.mp4; sourceTree = "<group>"; };
+		54B2CB2F1DDCB1B9008AB60A /* vr_stereo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = vr_stereo.mp4; sourceTree = "<group>"; };
+		54B2CB301DDCB1B9008AB60A /* pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause@3x.png"; sourceTree = "<group>"; };
+		54B2CB311DDCB1B9008AB60A /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
+		54B2CB321DDCB1B9008AB60A /* arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrows.png; sourceTree = "<group>"; };
+		54B2CB331DDCB1B9008AB60A /* cardboardOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardboardOff.png; sourceTree = "<group>"; };
+		54B2CB341DDCB1B9008AB60A /* cardboardOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardboardOn.png; sourceTree = "<group>"; };
 		54BBE9E61DDA122300DF45CE /* TVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVC.swift; sourceTree = "<group>"; };
 		688908089B03DE8F853749D3 /* Pods-SphereSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SphereSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-SphereSpace/Pods-SphereSpace.release.xcconfig"; sourceTree = "<group>"; };
 		6ED54BFF269C7989F768449A /* Pods-SphereSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SphereSpace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SphereSpace/Pods-SphereSpace.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,12 +96,28 @@
 				54385C461DAE637F00152E84 /* ViewController.swift */,
 				54385C481DAE637F00152E84 /* Main.storyboard */,
 				54BBE9E61DDA122300DF45CE /* TVC.swift */,
+				54B2CB2B1DDCADFD008AB60A /* PlayerViewController.swift */,
 				54385C4B1DAE637F00152E84 /* Assets.xcassets */,
 				54385C4D1DAE637F00152E84 /* LaunchScreen.storyboard */,
 				54385C501DAE637F00152E84 /* Info.plist */,
 				54990EB81DAFB8A700459878 /* GoogleService-Info.plist */,
+				54B2CB2D1DDCB1A2008AB60A /* Video */,
 			);
 			path = SphereSpace;
+			sourceTree = "<group>";
+		};
+		54B2CB2D1DDCB1A2008AB60A /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				54B2CB2E1DDCB1B9008AB60A /* vr.mp4 */,
+				54B2CB2F1DDCB1B9008AB60A /* vr_stereo.mp4 */,
+				54B2CB301DDCB1B9008AB60A /* pause@3x.png */,
+				54B2CB311DDCB1B9008AB60A /* play@3x.png */,
+				54B2CB321DDCB1B9008AB60A /* arrows.png */,
+				54B2CB331DDCB1B9008AB60A /* cardboardOff.png */,
+				54B2CB341DDCB1B9008AB60A /* cardboardOn.png */,
+			);
+			name = Video;
 			sourceTree = "<group>";
 		};
 		BB9DDA575C2A2347D3A1AEEF /* Frameworks */ = {
@@ -164,10 +196,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B2CB371DDCB1B9008AB60A /* pause@3x.png in Resources */,
+				54B2CB351DDCB1B9008AB60A /* vr.mp4 in Resources */,
+				54B2CB391DDCB1B9008AB60A /* arrows.png in Resources */,
+				54B2CB361DDCB1B9008AB60A /* vr_stereo.mp4 in Resources */,
+				54B2CB3A1DDCB1B9008AB60A /* cardboardOff.png in Resources */,
 				54385C4F1DAE637F00152E84 /* LaunchScreen.storyboard in Resources */,
 				54990EB91DAFB8A700459878 /* GoogleService-Info.plist in Resources */,
+				54B2CB3B1DDCB1B9008AB60A /* cardboardOn.png in Resources */,
 				54385C4C1DAE637F00152E84 /* Assets.xcassets in Resources */,
 				54385C4A1DAE637F00152E84 /* Main.storyboard in Resources */,
+				54B2CB381DDCB1B9008AB60A /* play@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B2CB2C1DDCADFD008AB60A /* PlayerViewController.swift in Sources */,
 				54385C471DAE637F00152E84 /* ViewController.swift in Sources */,
 				54BBE9E71DDA122300DF45CE /* TVC.swift in Sources */,
 				54385C451DAE637F00152E84 /* AppDelegate.swift in Sources */,
@@ -272,6 +312,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -321,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

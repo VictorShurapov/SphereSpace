@@ -115,6 +115,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                         print(error!.localizedDescription)
                         
                     } else {
+
                         print("User created via fb")
                     }
                 }
