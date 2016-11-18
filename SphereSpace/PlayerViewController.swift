@@ -545,6 +545,10 @@ class PlayerViewController: UIViewController, SCNSceneRendererDelegate, UIGestur
             }
         }
         
+        leftSceneView.delegate = nil
+        rightSceneView.delegate = nil
+
+        
     }
     
     func removeNode(_ node : SCNNode) {
@@ -556,14 +560,7 @@ class PlayerViewController: UIViewController, SCNSceneRendererDelegate, UIGestur
         if 0 == node.childNodes.count {
             node.removeFromParentNode()
         }
-        
     }
     
-    override func didReceiveMemoryWarning()
-    {
-        
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
-    }
+
 }
