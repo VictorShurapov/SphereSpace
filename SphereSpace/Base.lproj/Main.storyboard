@@ -142,15 +142,13 @@
                         <viewControllerLayoutGuide type="bottom" id="peA-8T-xc0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3mK-Zd-2C2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3j-EZ-paf">
-                                <frame key="frameInset" minX="300" width="300" height="600"/>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3j-EZ-paf">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </sceneKitView>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYF-8v-9E2">
-                                <frame key="frameInset" width="300" height="600"/>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYF-8v-9E2">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="OXz-GP-4hN"/>
@@ -185,16 +183,6 @@
                                     <action selector="sliderStartSliding:" destination="lXh-4p-pm2" eventType="touchDown" id="frl-6F-BP7"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cma-Wc-Zo6">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="0ia-3V-MgR"/>
-                                    <constraint firstAttribute="width" constant="41" id="qFa-wd-dJe"/>
-                                </constraints>
-                                <state key="normal" image="cardboardOn.png"/>
-                                <connections>
-                                    <action selector="activateCardboardView:" destination="lXh-4p-pm2" eventType="touchUpInside" id="auw-Ky-rJa"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vz4-B3-6bx">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="A9v-om-u9f"/>
@@ -204,6 +192,16 @@
                                 <state key="normal" image="arrows.png"/>
                                 <connections>
                                     <action selector="backToCenter" destination="lXh-4p-pm2" eventType="touchUpInside" id="s6P-JP-tXo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cma-Wc-Zo6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="0ia-3V-MgR"/>
+                                    <constraint firstAttribute="width" constant="41" id="qFa-wd-dJe"/>
+                                </constraints>
+                                <state key="normal" image="cardboardOn.png"/>
+                                <connections>
+                                    <action selector="activateCardboardView:" destination="lXh-4p-pm2" eventType="touchUpInside" id="auw-Ky-rJa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -221,11 +219,11 @@
                             <constraint firstItem="oFM-Tc-mWX" firstAttribute="trailing" secondItem="3mK-Zd-2C2" secondAttribute="trailingMargin" id="SMo-vT-Ot0"/>
                             <constraint firstItem="oFM-Tc-mWX" firstAttribute="leading" secondItem="o6b-FY-RHE" secondAttribute="trailing" constant="8" id="WeG-Xo-oEI"/>
                             <constraint firstAttribute="trailing" secondItem="h3j-EZ-paf" secondAttribute="trailing" id="Y3N-qr-0vS"/>
-                            <constraint firstItem="cma-Wc-Zo6" firstAttribute="top" secondItem="3mK-Zd-2C2" secondAttribute="topMargin" constant="20" id="Yir-gG-uxA"/>
+                            <constraint firstItem="cma-Wc-Zo6" firstAttribute="top" secondItem="3mK-Zd-2C2" secondAttribute="topMargin" constant="80" id="Yir-gG-uxA"/>
                             <constraint firstItem="h3j-EZ-paf" firstAttribute="leading" secondItem="3mK-Zd-2C2" secondAttribute="leading" id="Z0Q-iV-3pn"/>
                             <constraint firstItem="peA-8T-xc0" firstAttribute="top" secondItem="YYF-8v-9E2" secondAttribute="bottom" id="aJv-UI-8en"/>
-                            <constraint firstItem="Vz4-B3-6bx" firstAttribute="top" secondItem="3mK-Zd-2C2" secondAttribute="topMargin" constant="13" id="cFv-aW-el8"/>
-                            <constraint firstAttribute="trailing" secondItem="Vz4-B3-6bx" secondAttribute="trailing" constant="20" id="fpp-su-ShF"/>
+                            <constraint firstItem="Vz4-B3-6bx" firstAttribute="top" secondItem="3mK-Zd-2C2" secondAttribute="topMargin" constant="80" id="cFv-aW-el8"/>
+                            <constraint firstAttribute="trailing" secondItem="Vz4-B3-6bx" secondAttribute="trailing" constant="25" id="fpp-su-ShF"/>
                             <constraint firstItem="oFM-Tc-mWX" firstAttribute="leading" secondItem="3mK-Zd-2C2" secondAttribute="leadingMargin" constant="48" id="iWS-Tr-A6s"/>
                             <constraint firstItem="o6b-FY-RHE" firstAttribute="centerY" secondItem="oFM-Tc-mWX" secondAttribute="centerY" id="l3v-4s-LK8"/>
                             <constraint firstAttribute="trailing" secondItem="YYF-8v-9E2" secondAttribute="trailing" id="o0r-Qd-wht"/>
@@ -267,7 +265,7 @@
                         </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
+                    <size key="freeformSize" width="1000" height="1000"/>
                     <connections>
                         <outlet property="cardboardButton" destination="cma-Wc-Zo6" id="Yvd-KV-XvM"/>
                         <outlet property="heightSceneConstraint" destination="OXz-GP-4hN" id="VSa-NB-1Ic"/>

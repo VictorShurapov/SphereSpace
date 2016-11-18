@@ -89,12 +89,12 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
     }
     
     
-    // VDL or VDA is best place for segue???
-    //    override func viewDidAppear(_ animated: Bool) {
-    //        if FIRAuth.auth()?.currentUser != nil {
-    //            self.performSegue(withIdentifier: "signIn", sender: nil)
-    //        }
-    //    }
+     // VDL or VDA is best place for segue???
+        override func viewDidAppear(_ animated: Bool) {
+            if FIRAuth.auth()?.currentUser != nil {
+                self.performSegue(withIdentifier: "signIn", sender: nil)
+            }
+        }
     
     // MARK: EMAIL LOGIN
     func loginEmail() {
