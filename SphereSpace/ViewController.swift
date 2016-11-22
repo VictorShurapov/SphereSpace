@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
         textField.resignFirstResponder()
         return true
     }
-
+    
     
     var userActive = false
     
@@ -89,12 +89,12 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
     }
     
     
-//     // VDL or VDA is best place for segue???
-//        override func viewDidAppear(_ animated: Bool) {
-//            if FIRAuth.auth()?.currentUser != nil {
-//                self.performSegue(withIdentifier: "signIn", sender: nil)
-//            }
-//        }
+    //     // VDL or VDA is best place for segue???
+    //        override func viewDidAppear(_ animated: Bool) {
+    //            if FIRAuth.auth()?.currentUser != nil {
+    //                self.performSegue(withIdentifier: "signIn", sender: nil)
+    //            }
+    //        }
     
     // MARK: EMAIL LOGIN
     func loginEmail() {
@@ -113,38 +113,46 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
     // MARK: FB LOGIN
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error?) {
         
+//        if let error = error {
+//            print(error.localizedDescription)
+//            return
+//        }
+        
+        
         if let error = error {
             print(error.localizedDescription)
-            return
-        }
-        
-        // Getting an access token for the signed-in user(Facebook) and exchange it for a Firebase credential:
-        let credential: FIRAuthCredential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-        
-        if !userActive {
-            
-            // Authentication with Firebase using the Firebase credential:
-            FIRAuth.auth()?.signIn(with: credential) { (user, error) in
-                if error != nil {
-                    print(error!.localizedDescription)
-                    
-                } else {
-                    print("User created via fb")
-                    self.performSegue(withIdentifier: "signIn", sender: nil)
-                }
-            }
+        } else if result!.isCancelled {
+            print("FBLogin cancelled")
         } else {
-            //user active
-            FIRAuth.auth()?.currentUser!.link(with: credential) { (user, error) in
-                if error != nil {
-                    print(error!.localizedDescription)
-                    
-                } else {
-                    print("User logged-in via email first and now linked its account with facebook")
-                    self.performSegue(withIdentifier: "signIn", sender: nil)
-                    
+            // Getting an access token for the signed-in user(Facebook) and exchange it for a Firebase credential:
+            let credential: FIRAuthCredential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            
+            if !userActive {
+                
+                // Authentication with Firebase using the Firebase credential:
+                FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+                    if error != nil {
+                        print(error!.localizedDescription)
+                        
+                    } else {
+                        print("User created via fb")
+                        self.performSegue(withIdentifier: "signIn", sender: nil)
+                    }
+                }
+            } else {
+                //user active
+                FIRAuth.auth()?.currentUser!.link(with: credential) { (user, error) in
+                    if error != nil {
+                        print(error!.localizedDescription)
+                        
+                    } else {
+                        print("User logged-in via email first and now linked its account with facebook")
+                        self.performSegue(withIdentifier: "signIn", sender: nil)
+                        
+                    }
                 }
             }
+            
         }
     }
     
