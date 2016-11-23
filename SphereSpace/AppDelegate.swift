@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Get the currently signed-in user
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             
+            print("=================================================================== THERE WAS USER-ACTIVE CHECK @APPDELEGATE")
+            
             if (user == nil) {
                 let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
                 let vc = sb.instantiateViewController(withIdentifier: "LoginViewController")
