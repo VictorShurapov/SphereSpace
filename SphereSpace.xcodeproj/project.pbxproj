@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		044183E4AB51DFD54231ED49 /* Pods_SphereSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36E934425856AD97C61D981 /* Pods_SphereSpace.framework */; };
 		54385C451DAE637F00152E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54385C441DAE637F00152E84 /* AppDelegate.swift */; };
-		54385C471DAE637F00152E84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54385C461DAE637F00152E84 /* ViewController.swift */; };
+		54385C471DAE637F00152E84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54385C461DAE637F00152E84 /* LoginViewController.swift */; };
 		54385C4A1DAE637F00152E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54385C481DAE637F00152E84 /* Main.storyboard */; };
 		54385C4C1DAE637F00152E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54385C4B1DAE637F00152E84 /* Assets.xcassets */; };
 		54385C4F1DAE637F00152E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54385C4D1DAE637F00152E84 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		54385C411DAE637F00152E84 /* SphereSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SphereSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54385C441DAE637F00152E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54385C461DAE637F00152E84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54385C461DAE637F00152E84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		54385C491DAE637F00152E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54385C4B1DAE637F00152E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54385C4E1DAE637F00152E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			children = (
 				54990EBB1DAFD21800459878 /* SphereSpace.entitlements */,
 				54385C441DAE637F00152E84 /* AppDelegate.swift */,
-				54385C461DAE637F00152E84 /* ViewController.swift */,
+				54385C461DAE637F00152E84 /* LoginViewController.swift */,
 				54385C481DAE637F00152E84 /* Main.storyboard */,
 				54BBE9E61DDA122300DF45CE /* TVC.swift */,
 				54B2CB2B1DDCADFD008AB60A /* PlayerViewController.swift */,
@@ -266,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54B2CB2C1DDCADFD008AB60A /* PlayerViewController.swift in Sources */,
-				54385C471DAE637F00152E84 /* ViewController.swift in Sources */,
+				54385C471DAE637F00152E84 /* LoginViewController.swift in Sources */,
 				54BBE9E71DDA122300DF45CE /* TVC.swift in Sources */,
 				54385C451DAE637F00152E84 /* AppDelegate.swift in Sources */,
 			);

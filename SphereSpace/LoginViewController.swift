@@ -13,7 +13,7 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 
-class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -104,7 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
                 print(error!.localizedDescription)
                 
             } else {
-                print("User logged in via email!")
+                print("==============================================User logged in via email!")
                 self.performSegue(withIdentifier: "signIn", sender: nil)
             }
         })
@@ -112,13 +112,7 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
     
     // MARK: FB LOGIN
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error?) {
-        
-//        if let error = error {
-//            print(error.localizedDescription)
-//            return
-//        }
-        
-        
+
         if let error = error {
             print(error.localizedDescription)
         } else if result!.isCancelled {
@@ -126,16 +120,14 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
         } else {
             // Getting an access token for the signed-in user(Facebook) and exchange it for a Firebase credential:
             let credential: FIRAuthCredential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-            
             if !userActive {
                 
                 // Authentication with Firebase using the Firebase credential:
                 FIRAuth.auth()?.signIn(with: credential) { (user, error) in
                     if error != nil {
                         print(error!.localizedDescription)
-                        
                     } else {
-                        print("User created via fb")
+                        print("==============================================User created via fb")
                         self.performSegue(withIdentifier: "signIn", sender: nil)
                     }
                 }
@@ -146,7 +138,7 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
                         print(error!.localizedDescription)
                         
                     } else {
-                        print("User logged-in via email first and now linked its account with facebook")
+                        print("==============================================User logged-in via email first and now linked its account with facebook")
                         self.performSegue(withIdentifier: "signIn", sender: nil)
                         
                     }
