@@ -212,20 +212,20 @@
             </objects>
             <point key="canvasLocation" x="1694" y="970"/>
         </scene>
-        <!--TVC-->
+        <!--SphereSpace-->
         <scene sceneID="1gg-E6-fKh">
             <objects>
                 <tableViewController id="cUa-7z-ZH7" customClass="TVC" customModule="SphereSpace" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="169" sectionHeaderHeight="28" sectionFooterHeight="28" id="mRw-HF-lLg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" sectionHeaderHeight="28" sectionFooterHeight="28" id="mRw-HF-lLg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="500" id="Tr8-tS-1d8" customClass="FeedTableViewCell" customModule="SphereSpace" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="500"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="350" id="Tr8-tS-1d8" customClass="FeedTableViewCell" customModule="SphereSpace" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tr8-tS-1d8" id="1Of-GR-Bw2">
-                                    <frame key="frameInset" width="375" height="499"/>
+                                    <frame key="frameInset" width="375" height="349"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oKm-Ba-MeF">
@@ -276,7 +276,7 @@
                             <outlet property="delegate" destination="cUa-7z-ZH7" id="TEr-O1-kgX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BkZ-9b-aSc"/>
+                    <navigationItem key="navigationItem" title="SphereSpace" id="BkZ-9b-aSc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="To8-oa-xLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
