@@ -5,77 +5,79 @@
 //  Created by Victor Shurapov on 11/14/16.
 //  Copyright © 2016 Victor Shurapov. All rights reserved.
 //
-
-
-
-
-
 import UIKit
 import Firebase
-import FirebaseDatabase
-import FirebaseAuth
-
-//struct File {
-//    let thumbnail: UIImage
-//    let title: String!
-//    let message: String!
-//}
+import FirebaseStorageUI
 
 class TVC: UITableViewController {
     
-    
-    var ref: FIRDatabaseReference!
-    
+    var databaseRef: FIRDatabaseReference!
+    var storage: FIRStorage!
     var posts = [File]()
     
-    //let userID = FIRAuth.auth()?.currentUser?.uid
     
+    // MARK: Hardcoded text description for video
+    
+    let titleV = "Burj Khalifa Base Jump 360°"
+    let messageV = "Check out this uncut cockpit view footage of guys taking a giant leap from the pinnacle of the 828-metre-high Burj Khalifa."
+    
+    // Returns the data for the specified image in PNG format (->Data)
+    let imageData = UIImagePNGRepresentation(UIImage(named: "thumbNail3")!)!
+    
+    
+    // MARK: VIEW_DID_LOAD
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ref = FIRDatabase.database().reference()
+        databaseRef = FIRDatabase.database().reference()
+        storage = FIRStorage.storage()
+        
+        uploadImageToFirebaseStorage(data: imageData)
+        
         
         // Adding new streams
-        ref.child("Test").queryOrderedByKey().observe(.childAdded, with: {
+        databaseRef.child("Test").queryOrderedByKey().observe(.childAdded, with: {
             snapshot in
             
             let value = snapshot.value as? [String: AnyObject]
-            let thumbnailBase64String = value?["thumbnail"] as! String
-            let thumbnailData = Data.init(base64Encoded: thumbnailBase64String)
-            let thumbnailImage = UIImage(data: thumbnailData!)
-
-            
+            let imageUrl = value?["thumbnail"] as! String
             let title = value?["title"] as! String
             let message = value?["message"] as! String
             
-            self.posts.insert(File(thumbnail: thumbnailImage, title: title, message: message), at: 0)
-            
+            self.posts.insert(File(thumbnail: imageUrl, title: title, message: message), at: 0)
             self.tableView.reloadData()
         })
-        
         //post()
-        
     }
     
+    // MARK: Post to FIR Storage
+    func uploadImageToFirebaseStorage(data: Data) {
+        
+        let imageStorageRef = storage.reference(withPath: "images/thumbnail.png")
+        let uploadMetadata = FIRStorageMetadata()
+        uploadMetadata.contentType = "image/png"
+        let uploadTask = imageStorageRef.put(data, metadata: uploadMetadata, completion: { (metadata, error) in
+            
+            if error != nil {
+                print("I received an error! \(error?.localizedDescription)")
+            } else {
+                print("Upload complete! Here's some metadata! \(metadata)")
+                
+                let downloadURL = metadata!.downloadURL()?.absoluteString
+                // This can be stored in the Firebase Realtime Database
+                // It can also be used by image loading libraries like SDWebImage
+                self.post(title: self.titleV, message: self.messageV, image: downloadURL!)
+            }
+        })
+    }
     
-    //Post to Database
+    // MARK: Post to Database
     
-    func post() {
-        let title = "Title"
-        let message = "Message"
+    func post(title: String, message: String, image: String) {
         
-        // Initialization of UIImage from projet's file
-        let thumbnailImage = UIImage(named: "thumbNail3")
-        // Returns the data for the specified image in PNG format (->Data)
-        let imageData = UIImagePNGRepresentation(thumbnailImage!)!
-        // Returns a Base-64 encoded string.
-        let myBase64ImageDataString = imageData.base64EncodedString() as NSString
-        
-        let post = ["title": title, "message": message, "thumbnail": myBase64ImageDataString] as [String : Any]
-        
-        ref.child("Test").childByAutoId().setValue(post)
-        
+        let post = ["title": title, "message": message, "thumbnail": image] as [String : Any]
+        databaseRef.child("Test").childByAutoId().setValue(post)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,38 +93,24 @@ class TVC: UITableViewController {
         let label2 = cell.viewWithTag(2) as! UILabel
         label2.text = posts[indexPath.row].message
         
-        cell.thumbNailImage.image = posts[indexPath.row].thumbnail
+        //cell.thumbNailImage.image = posts[indexPath.row].thumbnail
+        let imageRefString = posts[indexPath.row].thumbnail
+        let url = URL(string: imageRefString)
+        cell.thumbNailImage.sd_setImage(with: url)
         
-        return cell 
+        return cell
     }
     
-    // Movable Cells
     
-    //    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-    //        let movedObject = self.posts[sourceIndexPath.row]
-    //        posts.remove(at: sourceIndexPath.row)
-    //        posts.insert(movedObject, at: destinationIndexPath.row)
-    //    }
-    
-    //        dataBaseRef.child("liveStreams").child(userID!).observe(.childAdded, with: {
-    //            // Getting user stream url
-    //            snapshot in
-    //
-    //            let snap = snapshot.value as! [String: String]
-    //            let streamUrl = snap["watchStreamUrl"]! as String
-    //            self.streamUrlArray.insert(streamUrl, at: 0)
-    //            self.tableView.reloadData()
-    //
-    //
-    //        })
-    
-    //let userID = FIRAuth.auth()?.currentUser?.uid
-    
-    //        func getUid() -> String {
-    //            return (FIRAuth.auth()?.currentUser?.uid)!
-    //        }
-    //
-    //        func getQuery() -> FIRDatabaseQuery {
-    //            return (dataBaseRef.child("user-posts").child(getUid()))
-    //        }
 }
+
+
+//let userID = FIRAuth.auth()?.currentUser?.uid
+
+
+//// Initialization of UIImage from projet's file
+//let thumbnailImage = UIImage(named: "thumbNail3")
+//// Returns the data for the specified image in PNG format (->Data)
+//let imageData = UIImagePNGRepresentation(thumbnailImage!)!
+//// Returns a Base-64 encoded string.
+//let myBase64ImageDataString = imageData.base64EncodedString() as NSString

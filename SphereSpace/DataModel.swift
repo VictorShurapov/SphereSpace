@@ -11,7 +11,7 @@ import UIKit
 
 
 struct File {
-    let thumbnail: UIImage!
+    let thumbnail: String
     let title: String!
     let message: String!
 }

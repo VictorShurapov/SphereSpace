@@ -24,7 +24,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SphereSpace.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,7 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2E303C3CE7513908EE880D9CA833AFAE</key>
+		<key>23BA9083ED0D2392A167A8AFA04427FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +57,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3F2E62448EB11BCE25174F984240C27A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>61AF977C23DFB1506EEC7FDC5AACAB7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6EDC37F3FA92533C6AC3562458AA91F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>995823B16058C7BA464FF317850ADA33</key>
+		<key>7D04535608058A2FABC0D16935868FB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9D0F2E5EA1B46A5D72FFD42B0B39DBBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B4F941067F5503AC74A7FD15EC94F70B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
