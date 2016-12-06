@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 
-struct File {
-    let thumbnail: String
-    let title: String!
-    let message: String!
+struct Content4Post {
+    let header: String!
+    let footer: String!
+    let thumbnail: String!
+    
 }
