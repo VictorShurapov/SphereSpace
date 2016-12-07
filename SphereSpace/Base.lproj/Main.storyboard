@@ -225,7 +225,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tr8-tS-1d8" id="1Of-GR-Bw2">
-                                    <frame key="frameInset" width="375" height="349.5"/>
+                                    <frame key="frameInset" width="375" height="349"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oKm-Ba-MeF"/>

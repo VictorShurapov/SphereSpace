@@ -16,6 +16,9 @@ class TVC: UITableViewController {
     var storage: FIRStorage!
     var posts = [Content4Post]()
 
+    
+    
+    
     // MARK: Hardcoded items
     
     var headerArray = ["Virtual experience of solitary confinement", "Burj Khalifa Base Jump 360°", "360° Video - Virtual Reality From Your Phone!"]
@@ -44,8 +47,12 @@ class TVC: UITableViewController {
         //image2Data(imagesDataArray: imagesArray)
         
         //uploadImageToFirebaseStorage(data: image2DataArray)
+        settingUserPic()
+
         addNewStream()
-    }
+        
+        
+        }
     
     // MARK: Adding new streams
     func addNewStream() {
@@ -110,6 +117,26 @@ class TVC: UITableViewController {
         cell.thumbNailImage.sd_setImage(with: url)
         
         return cell
+    }
+    
+    
+    // MARK: Setting UserPic for RightBarButtonItem
+    
+    func settingUserPic() {
+        
+        var image = UIImage(named: "cutmypic")
+        image = image?.withRenderingMode(.alwaysOriginal)
+    
+        let myBtn = UIButton()
+        myBtn.setImage(image!, for: .normal)
+        myBtn.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        myBtn.addTarget(self, action: #selector(self.smile), for: .touchUpInside)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: myBtn)
+    }
+    
+    func smile() {
+        print("Smile")
     }
 }
 //let userID = FIRAuth.auth()?.currentUser?.uid
