@@ -15,14 +15,14 @@ class TVC: UITableViewController {
     var databaseRef: FIRDatabaseReference!
     var storage: FIRStorage!
     var posts = [Content4Post]()
-
+    
     
     
     
     // MARK: Hardcoded items
     
     var headerArray = ["Virtual experience of solitary confinement", "Burj Khalifa Base Jump 360°", "360° Video - Virtual Reality From Your Phone!"]
-
+    
     var footerArray = ["Take the 360 degree video experience of solitary confinement in US prisons", "Check out this uncut cockpit view footage of guys taking a giant leap from the pinnacle of the 828-metre-high Burj Khalifa.", "Welcome to the world of 360 video! It's virtual reality without needing goggles."]
     
     let imagesArray = [UIImage(named: "thumbNail3")!, UIImage(named: "thumbNail2")!, UIImage(named: "thumbNail1")!]
@@ -48,11 +48,11 @@ class TVC: UITableViewController {
         
         //uploadImageToFirebaseStorage(data: image2DataArray)
         settingUserPic()
-
+        
         addNewStream()
         
         
-        }
+    }
     
     // MARK: Adding new streams
     func addNewStream() {
@@ -124,19 +124,39 @@ class TVC: UITableViewController {
     
     func settingUserPic() {
         
-        var image = UIImage(named: "cutmypic")
-        image = image?.withRenderingMode(.alwaysOriginal)
-    
+        let image = UIImage(named: "cutmypic")
+        
+        //let userPicBBItem = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
+        let searchBBItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
+        
         let myBtn = UIButton()
         myBtn.setImage(image!, for: .normal)
-        myBtn.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-        myBtn.addTarget(self, action: #selector(self.smile), for: .touchUpInside)
+        myBtn.frame = CGRect(x: 0, y: 0, width: image!.size.width, height: image!.size.height)
+        // myBtn.addTarget(self, action: #selector(self.smile), for: .touchUpInside)
+
+        let userPicBBItem = UIBarButtonItem(customView: myBtn)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: myBtn)
-    }
-    
-    func smile() {
-        print("Smile")
+//        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+//        fixedSpace.width = -20
+        
+        let negativeSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        negativeSpace.width = -10
+        
+        self.navigationItem.setRightBarButtonItems([negativeSpace, userPicBBItem, /*fixedSpace,*/  searchBBItem], animated: true)
     }
 }
+
+
+
+
 //let userID = FIRAuth.auth()?.currentUser?.uid
+
+// ============
+//        image = image?.withRenderingMode(.alwaysOriginal)
+//        let myBtn = UIButton()
+//        myBtn.setImage(image!, for: .normal)
+//        myBtn.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+//        myBtn.addTarget(self, action: #selector(self.smile), for: .touchUpInside)
+//self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: myBtn)
+// let userPicItem = UIBarButtonItem(customView: myBtn)
+
