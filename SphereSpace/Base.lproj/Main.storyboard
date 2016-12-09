@@ -64,6 +64,49 @@
             </objects>
             <point key="canvasLocation" x="-614" y="107"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="f25-8c-um7">
+            <objects>
+                <viewController id="lzX-7f-06O" customClass="SettingsViewController" customModule="SphereSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3lD-uE-Atu"/>
+                        <viewControllerLayoutGuide type="bottom" id="SEr-Oh-NwC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LOh-nd-XNi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-vO-qcy">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="706" translatesAutoresizingMaskIntoConstraints="NO" id="cvu-Bg-LUc">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="7de-em-4dR"/>
+                                            <constraint firstAttribute="width" constant="150" id="R5W-Lg-xgW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="75"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cvu-Bg-LUc" firstAttribute="top" secondItem="3lD-uE-Atu" secondAttribute="bottom" constant="8" id="Ndj-jw-Xhh"/>
+                            <constraint firstItem="ddj-vO-qcy" firstAttribute="centerX" secondItem="LOh-nd-XNi" secondAttribute="centerX" id="aU6-IT-B4l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userPic" destination="cvu-Bg-LUc" id="ahQ-D5-3Nb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gc6-9d-iLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="132"/>
+        </scene>
         <!--Player View Controller-->
         <scene sceneID="O4K-S0-h5K">
             <objects>
@@ -212,7 +255,7 @@
             </objects>
             <point key="canvasLocation" x="1694" y="970"/>
         </scene>
-        <!--SphereSpace-->
+        <!--TVC-->
         <scene sceneID="1gg-E6-fKh">
             <objects>
                 <tableViewController id="cUa-7z-ZH7" customClass="TVC" customModule="SphereSpace" customModuleProvider="target" sceneMemberID="viewController">
@@ -225,7 +268,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tr8-tS-1d8" id="1Of-GR-Bw2">
-                                    <frame key="frameInset" width="375" height="349"/>
+                                    <frame key="frameInset" width="375" height="349.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oKm-Ba-MeF"/>
@@ -286,7 +329,14 @@
                             <outlet property="delegate" destination="cUa-7z-ZH7" id="TEr-O1-kgX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SphereSpace" id="BkZ-9b-aSc"/>
+                    <navigationItem key="navigationItem" id="BkZ-9b-aSc">
+                        <barButtonItem key="leftBarButtonItem" title="SphereSpace" style="done" id="Mwz-Na-Uv0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="lzX-7f-06O" kind="show" identifier="showSettingsPage" id="Vyd-gz-ysg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="To8-oa-xLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,9 +347,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ABd-wg-Zx6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aiY-FP-tFB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aiY-FP-tFB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.65755501918776493" green="0.90821436702218805" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -312,6 +363,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="706" width="300" height="300"/>
         <image name="arrows.png" width="256" height="256"/>
         <image name="cardboardOn.png" width="87" height="51"/>
         <image name="play.png" width="540" height="540"/>

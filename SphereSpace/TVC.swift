@@ -124,26 +124,46 @@ class TVC: UITableViewController {
     
     func settingUserPic() {
         
-        let image = UIImage(named: "cutmypic")
+        let image1 = UIImage(named: "55")
+        let image2 = UIImage(named: "Search-50")
         
         //let userPicBBItem = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
-        let searchBBItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
+        //let searchBBItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
         
-        let myBtn = UIButton()
-        myBtn.setImage(image!, for: .normal)
-        myBtn.frame = CGRect(x: 0, y: 0, width: image!.size.width, height: image!.size.height)
-        // myBtn.addTarget(self, action: #selector(self.smile), for: .touchUpInside)
-
-        let userPicBBItem = UIBarButtonItem(customView: myBtn)
+        // UserPic Item
+        let myBtn1 = UIButton()
+        myBtn1.setImage(image1!, for: .normal)
+        myBtn1.frame = CGRect(x: 0, y: 0, width: image1!.size.width, height: image1!.size.height)
+        myBtn1.layer.cornerRadius = myBtn1.frame.width / 2
+        myBtn1.layer.masksToBounds = true
+        myBtn1.addTarget(self, action: #selector(self.go2Setting), for: .touchUpInside)
+        let userPicBBItem = UIBarButtonItem(customView: myBtn1)
+    
         
-//        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-//        fixedSpace.width = -20
         
-        let negativeSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        negativeSpace.width = -10
         
-        self.navigationItem.setRightBarButtonItems([negativeSpace, userPicBBItem, /*fixedSpace,*/  searchBBItem], animated: true)
+        // Search Item
+        
+        let myBtn2 = UIButton()
+        myBtn2.setImage(image2!, for: .normal)
+        myBtn2.frame = CGRect(x: 0, y: 0, width: image2!.size.width, height: image2!.size.height)
+        let searchBBItem = UIBarButtonItem(customView: myBtn2)
+        
+                let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+                fixedSpace.width = 20
+        
+//        let negativeSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+//        negativeSpace.width = 0
+        self.navigationItem.setRightBarButtonItems([/*negativeSpace, */userPicBBItem, fixedSpace, searchBBItem], animated: true)
     }
+    
+    
+
+    
+    func go2Setting(){
+        performSegue(withIdentifier: "showSettingsPage", sender: nil)
+    }
+
 }
 
 
