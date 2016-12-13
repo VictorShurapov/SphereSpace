@@ -124,29 +124,28 @@ class TVC: UITableViewController {
     
     func settingUserPic() {
         
-        let image1 = UIImage(named: "55")
-        let image2 = UIImage(named: "Search-50")
+        let uncutImage = user().userPic
+        //let imageUser = UIImage(named: "50")
+        let imageUser = uncutImage?.resizeWith(width: 28)
+        let imageSearch = UIImage(named: "Search-50")
         
         //let userPicBBItem = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
         //let searchBBItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
         
         // UserPic Item
         let myBtn1 = UIButton()
-        myBtn1.setImage(image1!, for: .normal)
-        myBtn1.frame = CGRect(x: 0, y: 0, width: image1!.size.width, height: image1!.size.height)
+        myBtn1.setImage(imageUser!, for: .normal)
+        myBtn1.frame = CGRect(x: 0, y: 0, width: imageUser!.size.width, height: imageUser!.size.height)
         myBtn1.layer.cornerRadius = myBtn1.frame.width / 2
         myBtn1.layer.masksToBounds = true
         myBtn1.addTarget(self, action: #selector(self.go2Setting), for: .touchUpInside)
         let userPicBBItem = UIBarButtonItem(customView: myBtn1)
     
-        
-        
-        
         // Search Item
         
         let myBtn2 = UIButton()
-        myBtn2.setImage(image2!, for: .normal)
-        myBtn2.frame = CGRect(x: 0, y: 0, width: image2!.size.width, height: image2!.size.height)
+        myBtn2.setImage(imageSearch!, for: .normal)
+        myBtn2.frame = CGRect(x: 0, y: 0, width: imageSearch!.size.width, height: imageSearch!.size.height)
         let searchBBItem = UIBarButtonItem(customView: myBtn2)
         
                 let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
@@ -157,19 +156,34 @@ class TVC: UITableViewController {
         self.navigationItem.setRightBarButtonItems([/*negativeSpace, */userPicBBItem, fixedSpace, searchBBItem], animated: true)
     }
     
-    
-
-    
     func go2Setting(){
         performSegue(withIdentifier: "showSettingsPage", sender: nil)
     }
-
+ 
+// MARK: Getting userData from FIRAuth
+    func user() -> UserModel {
+        let user = FIRAuth.auth()?.currentUser
+        //        let signInProvider = user?.providerID
+        //        let email = user?.email
+        //        let uid = user?.uid
+        let userName = user?.displayName
+        let photoURL = user?.photoURL
+        
+        var image: UIImage?
+        do {
+            let imageData = try Data.init(contentsOf: photoURL!)
+            image = UIImage(data: imageData)
+        } catch {
+            print(error)
+        }
+    
+        return UserModel(signInProvider: nil, email: nil, uid: nil, userName: userName, userPic: image)
+    }
 }
 
 
 
 
-//let userID = FIRAuth.auth()?.currentUser?.uid
 
 // ============
 //        image = image?.withRenderingMode(.alwaysOriginal)

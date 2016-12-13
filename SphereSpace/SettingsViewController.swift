@@ -9,11 +9,12 @@
 import UIKit
 import Firebase
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
     
+    var tvc = TVC()
     
     @IBOutlet weak var userPic: UIImageView!
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userName: UITextField!
     @IBAction func logOut(_ sender: AnyObject) {
         let firebaseAuth = FIRAuth.auth()
         do {
@@ -24,35 +25,28 @@ class SettingsViewController: UIViewController {
         
     }
     
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    //    func textFieldDidEndEditing(_ textField: UITextField) {
+    //        userName.text = textField.text
+    //    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        user()
-        
-        
+        userName.delegate = self
+        userPic.image = aaa().image
+        userName.text = aaa().username
     }
     
-    
-    func user() {
-        let user = FIRAuth.auth()?.currentUser
-        
-//        let signInProvider = user?.providerID
-        let userName = user?.displayName
-//        let email = user?.email
-//        let uid = user?.uid
-        let photoURL = user?.photoURL
-        
-        if let imageData = NSData(contentsOf: photoURL!) {
-            userPic.image = UIImage(data: imageData as Data)
-        }
-        do {
-            
-            let imageData = try Data.init(contentsOf: photoURL!)
-            userPic.image = UIImage(data: imageData)
-            
-        } catch {
-            print(error)
-        }
-        
-        self.userName.text = userName!
+    func aaa() -> (image: UIImage?, username: String?) {
+        let image = tvc.user().userPic
+        let name = tvc.user().userName
+
+        return (image, name)
     }
+    
 }
