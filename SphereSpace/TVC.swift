@@ -16,9 +16,6 @@ class TVC: UITableViewController {
     var storage: FIRStorage!
     var posts = [Content4Post]()
     
-    
-    
-    
     // MARK: Hardcoded items
     
     var headerArray = ["Virtual experience of solitary confinement", "Burj Khalifa Base Jump 360°", "360° Video - Virtual Reality From Your Phone!"]
@@ -56,15 +53,38 @@ class TVC: UITableViewController {
     
     // MARK: Adding new streams
     func addNewStream() {
-        databaseRef.child("Test").queryOrderedByKey().observe(.childAdded, with: {
+        // example: let myTopPostsQuery = (ref.child("user-posts").child(getUid())).queryOrdered(byChild: "starCount")
+        // self.ref.child("users/(user.uid)/username").setValue(username)
+        // user().userPic
+        // child(getUid()))
+
+        // databaseRef.child("files").child(user().userPic).queryOrderedByKey().observe(.childAdded, with: {
+        //databaseRef.child("Test").queryOrderedByKey().observe(.childAdded, with: {
+        databaseRef.child("files").child(user().uid!).queryOrderedByKey().observe(.childAdded, with: {
             snapshot in
             
-            let value = snapshot.value as? [String: AnyObject]
-            let imageUrl = value?["thumbnail"] as! String
-            let text4Header = value?["header"] as! String
-            let text4Footer = value?["footer"] as! String
+            // MARK: Testing current web DataBase
             
-            self.posts.insert(Content4Post(header: text4Header, footer: text4Footer, thumbnail: imageUrl), at: 0)
+            let value = snapshot.value as? [String: AnyObject]
+            let name = value?["name"] as! String
+            let url = value?["url"] as! String
+            let date = "test"
+
+            
+            
+            
+            
+            
+            
+            
+//            let value = snapshot.value as? [String: AnyObject]
+//            let imageUrl = value?["thumbnail"] as! String
+//            let text4Header = value?["header"] as! String
+//            let text4Footer = value?["footer"] as! String
+            
+            //self.posts.insert(Content4Post(header: text4Header, footer: text4Footer, thumbnail: imageUrl), at: 0)
+            self.posts.insert(Content4Post(header: name, footer: date, thumbnail: url), at: 0)
+
             self.tableView.reloadData()
         })
     }
@@ -165,19 +185,28 @@ class TVC: UITableViewController {
         let user = FIRAuth.auth()?.currentUser
         //        let signInProvider = user?.providerID
         //        let email = user?.email
-        //        let uid = user?.uid
+                let uid = user?.uid
         let userName = user?.displayName
         let photoURL = user?.photoURL
         
         var image: UIImage?
-        do {
-            let imageData = try Data.init(contentsOf: photoURL!)
-            image = UIImage(data: imageData)
-        } catch {
-            print(error)
+      
+//        let data = NSData(contentsOf: photoURL!)
+//        let immmage = UIImage(data: data as! Data)
+        
+        if photoURL != nil {
+            do {
+                let imageData = try Data.init(contentsOf: (photoURL!))
+                image = UIImage(data: imageData)
+            } catch {
+                print("This is \(error)")
+            }
+        } else {
+            image = UIImage(named: "default_profile")
         }
-    
-        return UserModel(signInProvider: nil, email: nil, uid: nil, userName: userName, userPic: image)
+        
+
+        return UserModel(signInProvider: nil, email: nil, uid: uid, userName: userName, userPic: image)
     }
 }
 

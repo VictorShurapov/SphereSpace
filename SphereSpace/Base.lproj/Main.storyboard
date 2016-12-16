@@ -92,16 +92,16 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi6-9p-O4T">
-                                <frame key="frameInset" minX="160" minY="268" width="55" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi6-9p-O4T">
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="logOut:" destination="lzX-7f-06O" eventType="touchUpInside" id="b4U-ol-axs"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-gn-pgC">
-                                <frame key="frameInset" minX="16" minY="230" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-gn-pgC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZTL-M3-Ezi"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -109,9 +109,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Lta-gn-pgC" firstAttribute="trailing" secondItem="LOh-nd-XNi" secondAttribute="trailingMargin" id="8VQ-Kk-ye4"/>
                             <constraint firstItem="hi6-9p-O4T" firstAttribute="centerX" secondItem="LOh-nd-XNi" secondAttribute="centerX" id="MU4-VY-aZS"/>
                             <constraint firstItem="cvu-Bg-LUc" firstAttribute="top" secondItem="3lD-uE-Atu" secondAttribute="bottom" constant="8" id="Ndj-jw-Xhh"/>
+                            <constraint firstItem="hi6-9p-O4T" firstAttribute="top" secondItem="Lta-gn-pgC" secondAttribute="bottom" constant="8" id="RSL-TF-YYe"/>
+                            <constraint firstItem="Lta-gn-pgC" firstAttribute="leading" secondItem="LOh-nd-XNi" secondAttribute="leadingMargin" id="aU2-Fy-Kec"/>
                             <constraint firstItem="ddj-vO-qcy" firstAttribute="centerX" secondItem="LOh-nd-XNi" secondAttribute="centerX" id="aU6-IT-B4l"/>
+                            <constraint firstItem="Lta-gn-pgC" firstAttribute="top" secondItem="ddj-vO-qcy" secondAttribute="bottom" constant="8" id="ike-At-MMM"/>
                         </constraints>
                     </view>
                     <connections>

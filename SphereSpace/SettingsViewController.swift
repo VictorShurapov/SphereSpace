@@ -38,14 +38,20 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         userName.delegate = self
-        userPic.image = aaa().image
+        
+        if aaa().image != nil {
+            userPic.image = aaa().image
+        } else {
+            userPic.image = UIImage(named: "default_profile")
+        }
+        
         userName.text = aaa().username
     }
     
     func aaa() -> (image: UIImage?, username: String?) {
         let image = tvc.user().userPic
         let name = tvc.user().userName
-
+        
         return (image, name)
     }
     
