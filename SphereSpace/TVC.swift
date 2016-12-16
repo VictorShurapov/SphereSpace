@@ -195,12 +195,8 @@ class TVC: UITableViewController {
 //        let immmage = UIImage(data: data as! Data)
         
         if photoURL != nil {
-            do {
-                let imageData = try Data.init(contentsOf: (photoURL!))
-                image = UIImage(data: imageData)
-            } catch {
-                print("This is \(error)")
-            }
+            let imageData = try? Data.init(contentsOf: (photoURL!))
+            image = UIImage(data: imageData!)
         } else {
             image = UIImage(named: "default_profile")
         }
